@@ -123,17 +123,6 @@ class ThaiDocument {
         );
         currentY += lineHeight;
 
-        // Adjust spacing for ฉบับที่
-        if (formData.to) {
-            this.doc.text(
-                `(ฉบับที่ ${formData.to})`,
-                this.pageWidth / 2,
-                currentY + 10,
-                { align: 'center' }
-            );
-            currentY += lineHeight; // Add extra line height when showing ฉบับที่
-        }
-
         this.doc.setLineWidth(1);
         const lineWidth = cmToPt(4);
         const lineStartX = this.pageWidth / 2 - lineWidth / 2.1;
